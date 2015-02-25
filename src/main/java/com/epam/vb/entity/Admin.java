@@ -12,4 +12,5 @@ public class Admin extends User {
     public Post modifyPost(){
         return null;
     }
+
 }
