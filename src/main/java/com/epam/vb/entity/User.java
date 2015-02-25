@@ -1,6 +1,6 @@
 package com.epam.vb.entity;
 
-public class User {
+public abstract class User {
 
     private int id;
     private String name;
