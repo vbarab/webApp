@@ -2,11 +2,17 @@ package com.epam.vb.entity;
 
 public abstract class User {
 
-    private int id;
+    private int id;//TODO base Entity
     private String name;
     private String email;
     private String dataBirth;
+    //TODO diffrent names (nick 1rs 2nd...)
 
+
+    public User() {
+    }
+
+    //TODO remove constr ( beteer to set data )
     public User(int id, String name, String email, String dataBirth) {
         this.id = id;
         this.name = name;
