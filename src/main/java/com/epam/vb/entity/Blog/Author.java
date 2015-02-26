@@ -1,4 +1,4 @@
-package com.epam.vb.entity;
+package com.epam.vb.entity.Blog;
 
 public class Author extends User {
 
