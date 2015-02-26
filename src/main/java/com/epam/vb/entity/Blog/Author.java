@@ -8,4 +8,5 @@ public class Author extends Authorized {
     public Post modifyPost(){
         return null;
     }
+    public void deletePost(){}
 }

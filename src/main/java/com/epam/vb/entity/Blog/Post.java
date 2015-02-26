@@ -2,7 +2,7 @@ package com.epam.vb.entity.Blog;
 
 import java.util.ArrayList;
 
-public class Post  {
+public class Post {
 
     private String title;
     private String topic;
@@ -10,7 +10,5 @@ public class Post  {
     private String text;
 
     ArrayList topicArrays = new ArrayList();
-
-
 
 }
