@@ -1,6 +1,7 @@
 package com.epam.vb.entity.Blog;
 
 import javax.xml.crypto.Data;
+import java.util.UUID;
 
 public abstract class Authorized extends User {
 
@@ -9,8 +10,6 @@ public abstract class Authorized extends User {
     private Data dataBirth;
     private String nickName;
     private char password;
+    private UUID id; /* = UUID.randomUUID();*/
 
-    //TODO DateTime
-    //TODO UUID
-    //TODO change  arrayList to list
 }
