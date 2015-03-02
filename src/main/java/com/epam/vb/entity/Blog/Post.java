@@ -8,6 +8,7 @@ public class Post {
     private String topic;
     private String authorName;
     private String text;
+    private String descritpion;
 
     ArrayList topicArrays = new ArrayList();
 
