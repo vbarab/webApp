@@ -11,12 +11,14 @@ public class Comment extends Post  {
     Date date ;
 
     public Comment(String text, Date date) {
+        super();
         this.text = text;
         this.date = date;
     }
 
 
-    public void setCommentDate() {
+
+    public void setCurrentDate() {
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("День dd Месяц MM Год yyyy Время hh:mm");
         System.out.println(dateFormat.format(date));

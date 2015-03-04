@@ -17,4 +17,5 @@ public abstract class Authorized extends User {
     private String gender;
 
 
+
 }
