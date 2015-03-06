@@ -5,14 +5,15 @@ import java.util.*;
 public class BlogFactory {
     private static final Random RANDOM = new Random();
 
-    public static Blog createPoliticBlog(){
-            Blog blog = new Blog();
-            blog.setTitle("Politics");
-            blog.setDescription("What happen in USA");
-            blog.setTag("Politics");
+    public static Blog createPoliticBlog() {
+        Blog blog = new Blog();
+        blog.setTitle("Politics");
+        blog.setDescription("What happen in USA");
+        blog.setTag("Politics");
 
-return blog;
-        }
+        return blog;
+    }
+
     public static String stringGenerator(String characters, int length) {
 
         char[] text = new char[length];
@@ -25,6 +26,7 @@ return blog;
     public static String titleCreator() {
         return stringGenerator("qwertyuiopsdfghjklzxcvbnm", 6);
     }
+
     public static String tagCreator() {
         return stringGenerator("qwertyuiopsdfghjklzxcvbnm", 6);
     }
@@ -38,7 +40,7 @@ return blog;
     }
 
 
-    public static Blog createBlog(){
+    public static Blog createBlog() {
         Blog blog = new Blog();
         PostFactory postFactory = new PostFactory();
         Post post = postFactory.createRandomPost();
