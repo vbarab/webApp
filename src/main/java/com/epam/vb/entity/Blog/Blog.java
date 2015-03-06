@@ -8,11 +8,25 @@ import java.util.List;
 
 public class Blog {
 
-   private String title;
-   private String description;
-   private String tag;
+    private String title;
+    private String description;
+    private String tag;
     private Date date;
     private List<Post> postList;
+
+    public Blog() {
+    }
+
+    @Override
+    public String toString() {
+        return "Blog{" +
+                "title='" + title + '\'' +
+                ", tag='" + tag + '\'' +
+                ", description='" + description + '\'' +
+                ", date='" + date + '\'' +
+                ", postList='" + postList + '\'' +
+                '}';
+    }
 
     public Date getDate() {
         return date;
@@ -20,10 +34,6 @@ public class Blog {
 
     public void setDate(Date date) {
         this.date = date;
-    }
-
-
-    public Blog() {
     }
 
     public String getTitle() {
@@ -56,7 +66,7 @@ public class Blog {
     }
 
     public void addPost(Post post) {
-        if (post==null) postList = new ArrayList<Post>();
+        if (post == null) postList = new ArrayList<Post>();
         postList.add(post);
     }
 }

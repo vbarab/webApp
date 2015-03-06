@@ -16,6 +16,22 @@ public abstract class Authorized extends User {
     private String about;
     private String gender;
 
+    public String getEmail() {
+        return email;
+    }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+    public Authorized(String email, String nickName) {
+    }
 }
