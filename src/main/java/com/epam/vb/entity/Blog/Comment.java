@@ -1,6 +1,5 @@
 package com.epam.vb.entity.Blog;
 
-import javafx.geometry.Pos;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

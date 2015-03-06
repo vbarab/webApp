@@ -11,8 +11,18 @@ public class Blog {
    private String title;
    private String description;
    private String tag;
-    private Date date;
+   private Date date;
     private List<Post> postList;
+
+    @Override
+    public String toString() {
+        return "Blog{" +
+                "title='" + title + '\'' +
+                ", tag='" + tag + '\'' +
+                ", description='" + description + '\'' +
+                ",date='" + date + '\'' +
+                '}';
+    }
 
     public Date getDate() {
         return date;
