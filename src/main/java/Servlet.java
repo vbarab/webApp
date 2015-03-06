@@ -6,28 +6,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.Writer;
 
-@WebServlet(name = "Servlet")
+@WebServlet(name = "Servlet",urlPatterns = "/servlet")
 public class Servlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        {
-            final Writer writer = new Writer() {
-                @Override
-                public void write(char[] cbuf, int off, int len) throws IOException {
 
-                }
-
-                @Override
-                public void flush() throws IOException {
-
-                }
-
-                @Override
-                public void close() throws IOException {
-
-                }
-            };
-            writer.write("asdasd");
-        }
 
     }
 

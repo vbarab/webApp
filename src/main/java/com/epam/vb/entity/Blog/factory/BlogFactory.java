@@ -1,4 +1,7 @@
-package com.epam.vb.entity.Blog;
+package com.epam.vb.entity.Blog.factory;
+
+import com.epam.vb.entity.Blog.model.Blog;
+import com.epam.vb.entity.Blog.model.Post;
 
 import java.util.*;
 

@@ -1,4 +1,6 @@
-package com.epam.vb.entity.Blog;
+package com.epam.vb.entity.Blog.factory;
+
+import com.epam.vb.entity.Blog.model.Post;
 
 import java.util.Date;
 import java.util.Random;

@@ -1,6 +1,9 @@
 package com.epam.vb.entity.Blog;
 
 
+import com.epam.vb.entity.Blog.factory.BlogFactory;
+import com.epam.vb.entity.Blog.factory.PostFactory;
+
 public class Runner {
     public static void main(String[] args) {
         PostFactory postFactory = new PostFactory();

@@ -1,6 +1,4 @@
-package com.epam.vb.entity.Blog;
-
-import javafx.geometry.Pos;
+package com.epam.vb.entity.Blog.model;
 
 import java.util.ArrayList;
 import java.util.Date;

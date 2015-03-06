@@ -1,4 +1,4 @@
-package com.epam.vb.entity.Blog;
+package com.epam.vb.entity.Blog.model;
 
 
 import java.text.SimpleDateFormat;
