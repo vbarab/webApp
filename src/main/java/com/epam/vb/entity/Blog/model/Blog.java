@@ -11,6 +11,23 @@ public class Blog {
     private String tag;
     private Date date;
     private List<Post> postList;
+    private String author;
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public List<Post> getPostList() {
+        return postList;
+    }
+
+    public void setPostList(List<Post> postList) {
+        this.postList = postList;
+    }
 
     public Blog() {
     }
@@ -19,10 +36,11 @@ public class Blog {
     public String toString() {
         return "Blog{" +
                 "title='" + title + '\'' +
-                ", tag='" + tag + '\'' +
                 ", description='" + description + '\'' +
-                ", date='" + date + '\'' +
-                ", postList='" + postList + '\'' +
+                ", tag='" + tag + '\'' +
+                ", date=" + date +
+                ", postList=" + postList +
+                ", author='" + author + '\'' +
                 '}';
     }
 
@@ -64,7 +82,8 @@ public class Blog {
     }
 
     public void addPost(Post post) {
-        if (post == null) postList = new ArrayList<Post>();
+        if (post == null) return;
+        if (postList == null) postList = new ArrayList<Post>();
         postList.add(post);
     }
 }

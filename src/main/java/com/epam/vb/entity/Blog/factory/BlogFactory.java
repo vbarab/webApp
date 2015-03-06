@@ -1,5 +1,6 @@
 package com.epam.vb.entity.Blog.factory;
 
+import com.epam.vb.entity.Blog.model.Author;
 import com.epam.vb.entity.Blog.model.Blog;
 import com.epam.vb.entity.Blog.model.Post;
 
@@ -13,6 +14,7 @@ public class BlogFactory {
         blog.setTitle("Politics");
         blog.setDescription("What happen in USA");
         blog.setTag("Politics");
+        blog.setAuthor("Pupkin");
 
         return blog;
     }
@@ -42,6 +44,9 @@ public class BlogFactory {
         return new Date(RANDOM.nextInt());
     }
 
+    private static String authorCreator() {
+        return stringGenerator("wertyuioplkjhgfdsazxcvb", 8);
+    }
 
     public static Blog createBlog() {
         Blog blog = new Blog();
@@ -51,9 +56,10 @@ public class BlogFactory {
         blog.setTag(tagCreator());
         blog.setTitle(titleCreator());
         blog.setDescription(descriptonCreator());
-        List<Post> postList = new ArrayList<Post>();
-        postList.add(post);
-        blog.setPosts(postList);//array
+        blog.setAuthor(authorCreator());
+        //List<Post> postList = new ArrayList<Post>();
+        //postList.add(post);
+        // blog.setPosts(postList);//array
         blog.addPost(post);//object
         return blog;
 

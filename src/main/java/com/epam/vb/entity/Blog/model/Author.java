@@ -8,6 +8,7 @@ public class Author extends Authorized {
         super(email,nickName);
     }
 
+
     public static class NickToEmailComparator implements Comparator<Author> {
 
         @Override
@@ -22,11 +23,5 @@ public class Author extends Authorized {
             return resultNick;
         }
     }
-    public Post createPost(){
-        return null;
-    }
-    public Post modifyPost(){
-        return null;
-    }
-    public void deletePost(){}
+
 }
