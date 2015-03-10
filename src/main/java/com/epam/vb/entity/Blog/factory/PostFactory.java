@@ -5,13 +5,10 @@ import com.epam.vb.entity.Blog.model.Blog;
 import com.epam.vb.entity.Blog.model.Post;
 import com.epam.vb.entity.Blog.model.Tag;
 import com.thedeanda.lorem.Lorem;
-import javafx.geometry.Pos;
 
-import javax.swing.text.html.HTML;
 import java.util.*;
 
 public class PostFactory {
-    private static final Random RANDOM = new Random();
 
     public static List<Post> createList(int amount, Blog blog, Authorized authorized, List<Tag> tags) {
         List<Post> posts = new ArrayList<>();
@@ -37,38 +34,5 @@ public class PostFactory {
         return post;
     }
 
-    public static String stringGenerator(String characters, int length) {
-
-        char[] text = new char[length];
-        for (int i = 0; i < length; i++) {
-            text[i] = characters.charAt(RANDOM.nextInt(characters.length()));
-        }
-        return new String(text);
-    }
-
-    public static String nameCreator() {
-        return stringGenerator("qwertyuiopsdfghjklzxcvbnm", 6);
-    }
-
-    private static String authorCreator() {
-        return stringGenerator("wertyuioplkjhgfdsazxcvb", 8);
-    }
-
-    private static Date dateCreator() {
-        return new Date(RANDOM.nextInt());
-    }
-
-    private static UUID uuidCreator() {
-        return new UUID(RANDOM.nextInt(), RANDOM.nextInt());
-    }
-
-/*    public static Post createRandomPost() {
-         String name = nameCreator();
-         String author = authorCreator();
-         Date date = dateCreator();
-         UUID uuid = uuidCreator();
-        return new Post(name, author, date, uuid);
-
-    }*/
 
 }
