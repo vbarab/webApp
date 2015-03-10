@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Blog {
+public class Blog extends BaseEntity {
 
     private String title;
     private String description;

@@ -6,15 +6,24 @@ import java.util.UUID;
 public abstract class Publication extends BaseEntity {
 
     private String bodyText;
-    private String authorName;
+    private Authorized authorName;
     private Date creationDate;
     private int like;
+    private String title;
 
     public Publication() {
     }
 
     public Publication(UUID uuid) {
         super(uuid);
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getBodyText() {
@@ -25,11 +34,11 @@ public abstract class Publication extends BaseEntity {
         this.bodyText = bodyText;
     }
 
-    public String getAuthorName() {
+    public Authorized getAuthorName() {
         return authorName;
     }
 
-    public void setAuthorName(String authorName) {
+    public void setAuthorName(Authorized authorName) {
         this.authorName = authorName;
     }
 

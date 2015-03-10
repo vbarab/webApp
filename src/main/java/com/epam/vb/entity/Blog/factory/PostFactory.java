@@ -20,7 +20,8 @@ public class PostFactory {
 
     public static Post create(Blog blog, Authorized authorized, List<Tag> tags) {
         Post post = new Post();
-        post.setAuthorName(Lorem.getName());
+        int randomNumber = (int) (Math.random() * 10);
+        post.setAuthorName(authorized);
         post.setTitle(Lorem.getTitle(7));
         post.setBodyText(Lorem.getWords(90));
         List<Tag> postTags = new ArrayList<>();
@@ -28,9 +29,10 @@ public class PostFactory {
             if (Math.random() < 0.5) postTags.add(tag);
         }
         post.setTagList(postTags);
-        post.setViews((int) Math.random() * 1000);
-        post.setLike((int) Math.random() * 70);
-        post.setDeleted(Math.random() > 5);
+
+        post.setViews(randomNumber * 70);
+        post.setLike(randomNumber * 13);
+        post.setDeleted(Math.random() > 0.5);
         return post;
     }
 

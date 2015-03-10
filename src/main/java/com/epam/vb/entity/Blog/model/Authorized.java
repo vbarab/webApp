@@ -4,22 +4,20 @@ import javax.xml.crypto.Data;
 import java.util.Date;
 import java.util.UUID;
 
-public class Authorized extends User {
+public class Authorized extends BaseEntity {
 
     private String lastName;
     private String email;
     private Date dataBirth;
     private Date dateRegistration;
     private String firstName;
-    private char password;
-    private String country;
     private String gender;
+
+    public Authorized() {
+    }
 
     public Date getDateRegistration() {
         return dateRegistration;
-    }
-
-    public Authorized() {
     }
 
     public void setDateRegistration(Date dateRegistration) {
@@ -40,16 +38,6 @@ public class Authorized extends User {
 
     public void setDataBirth(Date dataBirth) {
         this.dataBirth = dataBirth;
-    }
-
-
-    public void setPassword(char password) {
-        this.password = password;
-    }
-
-
-    public void setCountry(String country) {
-        this.country = country;
     }
 
 
