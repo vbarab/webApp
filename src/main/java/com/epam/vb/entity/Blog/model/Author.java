@@ -4,12 +4,7 @@ import java.util.Comparator;
 
 public class Author extends Authorized {
 
-    public Author(String email, String nickName) {
-        super(email,nickName);
-    }
-
-
-    public static class NickToEmailComparator implements Comparator<Author> {
+   /* public static class NickToEmailComparator implements Comparator<Author> {
 
         @Override
         public int compare(Author o1, Author o2) {
@@ -22,6 +17,6 @@ public class Author extends Authorized {
             //int resultEmail = firstEmail.compareTo(secondEmail);
             return resultNick;
         }
-    }
+    }*/
 
 }

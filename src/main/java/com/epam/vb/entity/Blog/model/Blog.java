@@ -8,16 +8,16 @@ public class Blog {
 
     private String title;
     private String description;
-    private String tag;
-    private Date date;
+    private List<Tag> tag;
+    private Date creationDate;
     private List<Post> postList;
-    private String author;
+    private Authorized author;
 
-    public String getAuthor() {
-        return author;
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(Authorized author) {
         this.author = author;
     }
 
@@ -32,24 +32,16 @@ public class Blog {
     public Blog() {
     }
 
-    @Override
-    public String toString() {
-        return "Blog{" +
-                "title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", tag='" + tag + '\'' +
-                ", date=" + date +
-                ", postList=" + postList +
-                ", author='" + author + '\'' +
-                '}';
+    public List<Tag> getTag() {
+        return tag;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getCreationDate() {
+        return creationDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public Authorized getAuthor() {
+        return author;
     }
 
     public String getTitle() {
@@ -68,18 +60,11 @@ public class Blog {
         this.description = description;
     }
 
-    public String getTag() {
-        return tag;
-    }
 
-    public void setTag(String tag) {
+    public void setTag(List<Tag> tag) {
         this.tag = tag;
     }
 
-
-    public void setPosts(List<Post> posts) {
-        postList = posts;
-    }
 
     public void addPost(Post post) {
         if (post == null) return;
