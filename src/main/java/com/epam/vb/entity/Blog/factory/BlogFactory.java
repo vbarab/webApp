@@ -1,68 +1,26 @@
 package com.epam.vb.entity.Blog.factory;
 
-import com.epam.vb.entity.Blog.model.Author;
+
+import com.epam.vb.entity.Blog.model.Authorized;
 import com.epam.vb.entity.Blog.model.Blog;
-import com.epam.vb.entity.Blog.model.Post;
+
+import com.thedeanda.lorem.Lorem;
 
 import java.util.*;
 
 public class BlogFactory {
-    private static final Random RANDOM = new Random();
 
-    public static Blog createPoliticBlog() {
+
+    public static Blog create(){
         Blog blog = new Blog();
-        blog.setTitle("Politics");
-        blog.setDescription("What happen in USA");
-        blog.setTag("Politics");
-        blog.setAuthor("Pupkin");
-
+        Authorized authorized = AuthorizedUserFactory.create();
+        blog.setAuthor(authorized);
+        blog.setCreationDate(Dates.randomDateBetween(authorized.getDateRegistration(),new Date()));
+        blog.setTitle(Lorem.getTitle(5));
+        blog.setDescription(Lorem.getWords(12));
+        blog.setTag(TagFactory.createList(5));
+        blog.setPostList(PostFactory.createList(20,blog,authorized,blog.getTag()));
         return blog;
-    }
-
-    public static String stringGenerator(String characters, int length) {
-
-        char[] text = new char[length];
-        for (int i = 0; i < length; i++) {
-            text[i] = characters.charAt(RANDOM.nextInt(characters.length()));
-        }
-        return new String(text);
-    }
-
-    public static String titleCreator() {
-        return stringGenerator("qwertyuiopsdfghjklzxcvbnm", 6);
-    }
-
-    public static String tagCreator() {
-        return stringGenerator("qwertyuiopsdfghjklzxcvbnm", 6);
-    }
-
-    private static String descriptonCreator() {
-        return stringGenerator("wertyuioplkjhgfdsazxcvb", 8);
-    }
-
-    private static Date dateCreator() {
-        return new Date(RANDOM.nextInt());
-    }
-
-    private static String authorCreator() {
-        return stringGenerator("wertyuioplkjhgfdsazxcvb", 8);
-    }
-
-    public static Blog createBlog() {
-        Blog blog = new Blog();
-        PostFactory postFactory = new PostFactory();
-        Post post = postFactory.createRandomPost();
-        blog.setDate(dateCreator());
-        blog.setTag(tagCreator());
-        blog.setTitle(titleCreator());
-        blog.setDescription(descriptonCreator());
-        blog.setAuthor(authorCreator());
-        //List<Post> postList = new ArrayList<Post>();
-        //postList.add(post);
-        // blog.setPosts(postList);//array
-        blog.addPost(post);//object
-        return blog;
-
     }
 
 }
