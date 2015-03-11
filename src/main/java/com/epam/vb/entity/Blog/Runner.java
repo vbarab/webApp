@@ -8,17 +8,11 @@ import org.boon.Boon;
 
 public class Runner {
     public static void main(String[] args) {
-        PostFactory postFactory = new PostFactory();
-        BlogFactory blogFactory = new BlogFactory();
-      //  System.out.println(postFactory.createRandomPost());
-       // System.out.println(blogFactory.createPoliticBlog());
-       // System.out.println(blogFactory.createBlog());
-       Blog blog = BlogFactory.create();
-        System.out.println(blog);
+
+        Blog blog = BlogFactory.create();
         String displayBlog = Boon.toPrettyJson(blog);
         System.out.println(displayBlog);
-
-      //  System.out.println(blog.getPostList());
+        System.out.println(blog.getTitle());
 
     }
 }

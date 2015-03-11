@@ -13,6 +13,26 @@ public class Authorized extends BaseEntity {
     private String firstName;
     private String gender;
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Date getDataBirth() {
+        return dataBirth;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
     public Authorized() {
     }
 

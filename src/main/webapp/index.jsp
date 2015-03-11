@@ -7,17 +7,10 @@
     <title>Blog</title>
 </head>
 <body>
-<h1>Blog Title:${blog.title}</h1>
+<h1>${blog.author}</h1>
+<h2>title${blog.title}</h2>
+<h3>post : ${post.title}</h3>
 
-<h2>Blog Author:${blog.author}</h2>
 
-<div>
-    <p>${post.title}</p>
-</div>
-<div>
-    <c:forEach items="${blog.postList}" var="post">
-        <div><h1>Author:${post.authorName}</h1> </div>
-    </c:forEach>
-</div>
 </body>
 </html>
