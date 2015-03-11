@@ -1,5 +1,7 @@
 package com.epam.vb.entity.Blog.model;
 
+import org.boon.Boon;
+
 import javax.xml.crypto.Data;
 import java.util.Date;
 import java.util.UUID;
@@ -12,6 +14,23 @@ public class Authorized extends BaseEntity {
     private Date dateRegistration;
     private String firstName;
     private String gender;
+
+    Blog blog = new Blog();
+    String displayBlog = Boon.toPrettyJson(blog.getAuthor());
+    public String getDisplayBlog(){
+        return displayBlog;
+    }
+    @Override
+    public String toString() {
+        return "Authorized{" +
+                "lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", dataBirth=" + dataBirth +
+                ", dateRegistration=" + dateRegistration +
+                ", firstName='" + firstName + '\'' +
+                ", gender='" + gender + '\'' +
+                '}';
+    }
 
     public String getLastName() {
         return lastName;

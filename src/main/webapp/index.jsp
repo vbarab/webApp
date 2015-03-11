@@ -7,9 +7,9 @@
     <title>Blog</title>
 </head>
 <body>
-<h1>${blog.author}</h1>
-<h2>title${blog.title}</h2>
-<h3>post : ${post.title}</h3>
+<h1>author : ${blog.author.firstName}</h1>
+<h2>title : ${blog.title}</h2>
+
 
 
 </body>
