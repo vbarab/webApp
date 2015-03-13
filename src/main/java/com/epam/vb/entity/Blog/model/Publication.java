@@ -34,11 +34,11 @@ public abstract class Publication extends BaseEntity {
         this.bodyText = bodyText;
     }
 
-    public Authorized getAuthorName() {
+    public Authorized getAuthor() {
         return author;
     }
 
-    public void setAuthorName(Authorized authorName) {
+    public void setAuthor(Authorized authorName) {
         this.author = authorName;
     }
 

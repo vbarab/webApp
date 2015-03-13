@@ -12,8 +12,8 @@ public class CommentFactory {
 
     private static Comment create(Authorized authorized,Post post){
         Comment comment = new Comment();
-        if (Math.random() < 0.2) comment.setAuthorName(authorized);
-        else comment.setAuthorName(AuthorizedUserFactory.create());
+        if (Math.random() < 0.2) comment.setAuthor(authorized);
+        else comment.setAuthor(AuthorizedUserFactory.create());
         comment.setBodyText(Lorem.getWords(15));
         comment.setTitle(Lorem.getTitle(4));
         comment.setCreationDate(Dates.randomDateForm(post.getCreationDate()));

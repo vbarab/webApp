@@ -10,17 +10,11 @@
 </head>
 <body>
 <div>
-    <fmt:message key="hello"></fmt:message>
-</div>
-
-<h1><fmt:message key="author"></fmt:message> : ${blog.author.firstName}</h1>
-<h2><fmt:message key="title"></fmt:message> : ${blog.title}</h2>
-<div>
     <c:forEach items="${blog.postList}" var="post">
     <c:if test="${!post.deleted}">
-          <h1>${post.title}</h1>
-        <h2>${post.authorName}</h2>
-        ${post.description}
+          <h1> <fmt:message key="title"></fmt:message> : ${post.title}</h1>
+        <h2><fmt:message key="author"></fmt:message> :  ${post.author.firstName}</h2>
+       <div> <p> ${post.description}</p></div>
     </c:if>
     </c:forEach>
 </div>

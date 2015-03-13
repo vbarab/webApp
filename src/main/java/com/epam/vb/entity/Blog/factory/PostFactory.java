@@ -21,9 +21,10 @@ public class PostFactory {
     public static Post create(Blog blog, Authorized authorized, List<Tag> tags) {
         Post post = new Post();
         int randomNumber = (int) (Math.random() * 10);
-        post.setAuthorName(authorized);
+        post.setAuthor(authorized);
         post.setTitle(Lorem.getTitle(7));
         post.setBodyText(Lorem.getWords(90));
+        post.setDescription(Lorem.getWords(10,60));
         List<Tag> postTags = new ArrayList<>();
         for (Tag tag : tags) {
             if (Math.random() < 0.5) postTags.add(tag);
