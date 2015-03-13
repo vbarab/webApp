@@ -26,8 +26,8 @@
         </dependency>
         <dependency>
             <groupId>io.fastjson</groupId>
-            <artifactId>boon</artifactId>
-            <version>0.31</version>
+            <artifactId>etcd-client</artifactId>
+            <version>0.32</version>
         </dependency>
     </dependencies>
 </project>

@@ -6,7 +6,7 @@ import java.util.UUID;
 public abstract class Publication extends BaseEntity {
 
     private String bodyText;
-    private Authorized authorName;
+    private Authorized author;
     private Date creationDate;
     private int like;
     private String title;
@@ -35,11 +35,11 @@ public abstract class Publication extends BaseEntity {
     }
 
     public Authorized getAuthorName() {
-        return authorName;
+        return author;
     }
 
     public void setAuthorName(Authorized authorName) {
-        this.authorName = authorName;
+        this.author = authorName;
     }
 
     public Date getCreationDate() {

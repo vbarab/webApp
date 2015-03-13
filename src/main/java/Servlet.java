@@ -23,6 +23,7 @@ public class Servlet extends HttpServlet {
 
         Blog blog = BlogFactory.create();
         request.setAttribute("blog", blog);
+        request.setAttribute("post",blog.getPostList());
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
         dispatcher.forward(request, response);
 //TODO Count likes,vivod postov po date,vivod neudalennih , filetrs
