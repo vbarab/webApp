@@ -17,7 +17,6 @@ public class FileWorker {
     }
 
     public static void splitBySymbols() {
-
         Word word = new Word();
         String[] spitByWords = TEXT_SOURCE.split("[[)][(],;:.!?\\s]+");
         word.setWord(spitByWords);
@@ -30,7 +29,8 @@ public class FileWorker {
         }
 
     }
-    public static void splitBySentence(){
+
+    public static void splitBySentence() {
         String[] splitBySentence = TEXT_SOURCE.split("(\\. )");
 /*        for (int i = 0; i < splitBySentence.length; i++) {
             System.out.println("new line:" + " " + splitBySentence[i]);
@@ -42,8 +42,10 @@ public class FileWorker {
 /*        for (int i = 0; i < sentence.getSentence().length; i++) {
             System.out.println(sentence.getSentence()[i]);
         }*/
-
     }
 
+    public static void splitByParagraph(){
+        String[] splitByParagraph = TEXT_SOURCE.split("(\\. )\\n");
+    } //[]
 
 }
