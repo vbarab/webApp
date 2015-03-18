@@ -1,13 +1,15 @@
 package com.epam.vb.entity.Blog.parser;
 
-public class Symbol {
-    private static Character[] symbols;
+import java.util.List;
 
-    public static Character[] getSymbols() {
+public class Symbol {
+    private static List<Character> symbols;
+
+    public static List<Character> getSymbols() {
         return symbols;
     }
 
-    public static void setSymbols(Character[] symbols) {
+    public static void setSymbols(List<Character> symbols) {
         Symbol.symbols = symbols;
     }
 }

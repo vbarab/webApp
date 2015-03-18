@@ -1,21 +1,16 @@
 package com.epam.vb.entity.Blog;
 
 
-import com.epam.vb.entity.Blog.factory.BlogFactory;
-import com.epam.vb.entity.Blog.factory.PostFactory;
-import com.epam.vb.entity.Blog.model.Blog;
-import com.epam.vb.entity.Blog.parser.FileWorker;
+import com.epam.vb.entity.Blog.parser.Parser;
 import com.epam.vb.entity.Blog.parser.TextReader;
 import com.epam.vb.entity.Blog.parser.TextWriter;
-import org.boon.Boon;
-import org.boon.Str;
 
 import java.io.IOException;
 
 public class Runner {
     public static void main(String[] args) throws IOException {
 
-        FileWorker fileWorker = new FileWorker();
+        Parser fileWorker = new Parser();
          //fileWorker.splitBySymbols();
         fileWorker.splitBySentence();
 /*

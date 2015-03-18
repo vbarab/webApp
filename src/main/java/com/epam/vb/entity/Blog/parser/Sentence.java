@@ -1,15 +1,15 @@
 package com.epam.vb.entity.Blog.parser;
 
-public class Sentence {
-    private static Word[] sentence;
+import java.util.List;
 
-    public static Word[] getSentence() {
+public class Sentence {
+    private static List<Word>  sentence;
+
+    public static List<Word> getSentence() {
         return sentence;
     }
 
-    public static void setSentence(Word[] sentence) {
+    public static void setSentence(List<Word> sentence) {
         Sentence.sentence = sentence;
     }
-
-
 }

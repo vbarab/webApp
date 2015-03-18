@@ -1,14 +1,15 @@
 package com.epam.vb.entity.Blog.parser;
 
-public class Word {
-    private static String[] word;
+import java.util.List;
 
-    public static String[] getWord() {
+public class Word {
+    private static List<Symbol> word;
+
+    public static List<Symbol> getWord() {
         return word;
     }
 
-    public static void setWord(String[] word) {
+    public static void setWord(List<Symbol> word) {
         Word.word = word;
     }
-
 }
