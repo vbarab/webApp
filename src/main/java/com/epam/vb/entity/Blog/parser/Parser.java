@@ -1,8 +1,12 @@
 package com.epam.vb.entity.Blog.parser;
 
 
+import org.boon.Str;
+
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Parser {
     private static final String TEXT_SOURCE = "The original and reference implementation Java compilers," + "\n" +
@@ -39,7 +43,30 @@ public class Parser {
     }
 
     private static Word parseWord(String[] wordsStrings) {
-        return null;
+        Word word = new Word();
+
+        StringBuilder builder = new StringBuilder();
+        for(String s : wordsStrings) {
+            builder.append(s);
+        }
+        String symbol = builder.toString();
+   //     String[] symbStr = wordsStrings.toString().split("[[)][(],;:.!?\\s]+");
+        String[] symbolString = symbol.split("[\\W]");
+        for (String string : symbolString){
+            Symbol symbol1 = parseSymbol(symbolString);
+        }
+        System.out.println(word.toString());
+        return word;
+    }
+
+    private static Symbol parseSymbol(String[] symbolString) {
+       Symbol symbol = new Symbol();
+        for (int i = 0; i < symbolString.length; i++) {
+       String[] symbolArray=  symbolString[i].split("[[)][(],;:.!?\\s]+");
+            symbol.setSymbols(Arrays.asList(symbolArray));
+        }
+        return symbol;
+        //
     }
 
     //
