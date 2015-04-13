@@ -1,1 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
+<Flower>
+    <Name>smt</Name>
+    <Soil>Sand</Soil>
+    <Origin>Russia</Origin>
+    <Visual_parametrs>
+        <Stem_color>green</Stem_color>
+        <Leaf_color>blue</Leaf_color>
+        <Average_size>big</Average_size>
+    </Visual_parametrs>
+    <Growing_tips>
+        <Temperature>25</Temperature>
+        <Light>Low</Light>
+        <Watering>200</Watering>
+    </Growing_tips>
+    <Multiplying>Seed</Multiplying>
+</Flower>
