@@ -1,16 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:xsi="http://myFlowerSchema.kz"
+         xsi:schemaLocation="schema.xsd">
 <Flower>
     <Name>smt</Name>
     <Soil>Sand</Soil>
     <Origin>Russia</Origin>
-    <Visual_parametrs>
-        <Stem_color>green</Stem_color>
-        <Leaf_color>blue</Leaf_color>
-        <Average_size>big</Average_size>
-    </Visual_parametrs>
-    <Growing_tips>
+    <VisualParametrs>
+        <StemColor>green</StemColor>
+        <LeafColor>blue</LeafColor>
+        <AverageSize>big</AverageSize>
+    </VisualParametrs>
+    <GrowingTips>
         <Temperature>25</Temperature>
         <Light>Low</Light>
         <Watering>200</Watering>
-    </Growing_tips>
+    </GrowingTips>
     <Multiplying>Seed</Multiplying>
 </Flower>

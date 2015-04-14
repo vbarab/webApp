@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://myFlowerSchema.kz">
     <xs:element name="Flower">
         <xs:complexType>
             <xs:sequence>
@@ -17,17 +17,17 @@
 
                 <xs:element name="Origin" type="xs:string"/>
 
-                <xs:element name="Visual_рarameters">
+                <xs:element name="VisualParameters">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="Stem_color" type="xs:string"/>
-                            <xs:element name="Leaf_color" type="xs:string"/>
-                            <xs:element name="Avarage_size" type="xs:string"/>
+                            <xs:element name="StemColor" type="xs:string"/>
+                            <xs:element name="LeafColor" type="xs:string"/>
+                            <xs:element name="AvarageSize" type="xs:string"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
 
-                <xs:element name="Growing_tips">
+                <xs:element name="GrowingTips">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="Temperature" type="xs:decimal"/>
