@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns:xsi="http://myFlowerSchema.kz"
-         xsi:schemaLocation="schema.xsd">
-<Flower>
-    <Name>smt</Name>
-    <Soil>Sand</Soil>
-    <Origin>Russia</Origin>
-    <VisualParametrs>
+<Flower  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://myFlowerSchema.kz"
+         xsi:schemaLocation="http://myFlowerSchema.kz schema.xsd">
+    <Name>Name</Name>
+    <Soil>Clay</Soil>
+    <Origin>Usa</Origin>
+    <VisualParameters>
         <StemColor>green</StemColor>
         <LeafColor>blue</LeafColor>
-        <AverageSize>big</AverageSize>
-    </VisualParametrs>
+        <AvarageSize>12</AvarageSize>
+    </VisualParameters>
     <GrowingTips>
-        <Temperature>25</Temperature>
+        <Temperature>12</Temperature>
         <Light>Low</Light>
         <Watering>200</Watering>
     </GrowingTips>
     <Multiplying>Seed</Multiplying>
-</Flower>
+   </Flower>

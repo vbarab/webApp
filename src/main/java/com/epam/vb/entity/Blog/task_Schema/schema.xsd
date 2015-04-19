@@ -1,60 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://myFlowerSchema.kz">
-    <xs:element name="Flower">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="Name" type="xs:string"/>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://myFlowerSchema.kz"
+           elementFormDefault="qualified">
+    <element name="Flower">
+        <complexType>
+            <sequence>
+                <element name="Name" type="string"/>
 
-                <xs:element name="Soil">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:enumeration value="Sand"/>
-                            <xs:enumeration value="Silt"/>
-                            <xs:enumeration value="Clay"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
+                <element name="Soil">
+                    <simpleType>
+                        <restriction base="string">
+                            <enumeration value="Sand"/>
+                            <enumeration value="Silt"/>
+                            <enumeration value="Clay"/>
+                        </restriction>
+                    </simpleType>
+                </element>
 
-                <xs:element name="Origin" type="xs:string"/>
+                <element name="Origin" type="string"/>
 
-                <xs:element name="VisualParameters">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="StemColor" type="xs:string"/>
-                            <xs:element name="LeafColor" type="xs:string"/>
-                            <xs:element name="AvarageSize" type="xs:string"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
+                <element name="VisualParameters">
+                    <complexType>
+                        <sequence>
+                            <element name="StemColor" type="string"/>
+                            <element name="LeafColor" type="string"/>
+                            <element name="AvarageSize" type="string"/>
+                        </sequence>
+                    </complexType>
+                </element>
 
-                <xs:element name="GrowingTips">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="Temperature" type="xs:decimal"/>
-                            <xs:element name="Light">
-                                <xs:simpleType>
-                                    <xs:restriction>
-                                        <xs:enumeration value="Low"/>
-                                        <xs:enumeration value="Medium"/>
-                                        <xs:enumeration value="Hight"/>
-                                    </xs:restriction>
-                                </xs:simpleType>
-                            </xs:element>
-                            <xs:element name="Watering" type="xs:decimal"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
+                <element name="GrowingTips">
+                    <complexType>
+                        <sequence>
+                            <element name="Temperature" type="decimal"/>
+                            <element name="Light">
+                                <simpleType>
+                                    <restriction>
+                                        <enumeration value="Low"/>
+                                        <enumeration value="Medium"/>
+                                        <enumeration value="Hight"/>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <element name="Watering" type="decimal"/>
+                        </sequence>
+                    </complexType>
+                </element>
 
-                <xs:element name="Multiplying">
-                    <xs:simpleType>
-                        <xs:restriction>
-                            <xs:enumeration value="Seed"/>
-                            <xs:enumeration value="Leaf"/>
-                            <xs:enumeration value="Stem"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-</xs:schema>        
+                <element name="Multiplying">
+                    <simpleType>
+                        <restriction>
+                            <enumeration value="Seed"/>
+                            <enumeration value="Leaf"/>
+                            <enumeration value="Stem"/>
+                        </restriction>
+                    </simpleType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
