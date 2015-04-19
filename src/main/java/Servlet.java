@@ -12,17 +12,24 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet(name = "Servlet", urlPatterns = "/servlet")
+//@WebServlet(name = "Servlet", urlPatterns = "/servlet")
+@WebServlet("/register.jsp")
 public class Servlet extends HttpServlet {
 
+    @Override
+    protected void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
+        super.doPost(request,response);
+    }
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Blog blog = BlogFactory.create();
+        request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request,response);
+   /*     Blog blog = BlogFactory.create();
         request.setAttribute("blog", blog);
         request.setAttribute("post",blog.getPostList());
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
         dispatcher.forward(request, response);
 //TODO Count likes,vivod postov po date,vivod neudalennih , filetrs
         //TODO new class with static methods
-        //TODO sort in servlet
+        //TODO sort in servlet*/
     }
 }

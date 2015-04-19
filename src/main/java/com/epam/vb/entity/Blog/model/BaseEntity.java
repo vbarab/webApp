@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public abstract class BaseEntity {
     final UUID uuid;
-    Integer id;
+    Long id;
     boolean deleted;
 
     public BaseEntity() {
@@ -29,11 +29,11 @@ public abstract class BaseEntity {
         return uuid;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
